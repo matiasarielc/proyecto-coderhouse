@@ -12,65 +12,92 @@
     </head>
 
     <body>
+
         <div class="contenedor">
+
             <header class="header">
+
                 <div>
-                    <a href="index.html">
-                        <img class="logo" src="icons/cerveza-pino.png" alt="Logo de la marca">
+                    <a class="header__index" href="index.html">
+                        <img class="header__logo" src="icons/cerveza-pino.png" alt="Logo de la marca">
                     </a>
-                </div>       
-                <nav class="menuNavegacion">
+                </div>
+
+                <nav class="navegacion">
                     <ul>
-                        <li>
-                            <a class="iconoMenu" href="index.html">
-                                <img src="icons/icono-menu-blanco.png" alt="icono menu">
+                        <li class="navegacion__lista">
+                            <a href="index.html">
+                                <img class="navegacion__icono" src="icons/icono-menu-blanco.png" alt="icono menu">
                             </a>
-                            <ul>
-                                <li><a href="index.html">Inicio</a></li>
-                                <li><a href="pages/productos.html">Productos</a></li>
-                                <li><a href="pages/nosotros.html">Nosotros</a></li>
-                                <li><a href="pages/contacto.html">Contacto</a></li>
-                                <li><a href="pages/galeria.html">Galeria</a></li>
+                            <ul class="navegacion__botones">
+                                <li>
+                                    <a class="navegacion__boton" href="index.html">Inicio</a>
+                                </li>
+                                <li>
+                                    <a class="navegacion__boton" href="pages/productos.html">Productos</a>
+                                </li>
+                                <li>
+                                    <a class="navegacion__boton" href="pages/nosotros.html">Nosotros</a>
+                                </li>
+                                <li>
+                                    <a class="navegacion__boton" href="pages/contacto.html">Contacto</a>
+                                </li>
+                                <li>
+                                    <a class="navegacion__boton" href="pages/galeria.html">Galeria</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
+
             </header>
+
             <section class="contenedorPrincipal main">
+
                 <div>
-                    <img class="imagenCanillas" src="img/canillas.jpg" alt="Foto representativa de la marca">
+                    <img class="contenedorPrincipal__imagen" src="img/canillas.jpg" alt="Foto representativa de la marca">
                 </div>
-                <div class="contenedorDescripcion main">
-                    <img class="imagenLogo" src="img/cerveza-pino-gris.png" alt="imagen corporativa"> 
-                    <article>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero et eligendi totam debitis sunt, ullam quidem temporibus exercitationem! Repellat nam neque iure corporis enim fugiat molestiae illo nesciunt aliquid consequuntur.</p>    
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, autem distinctio incidunt quia sunt totam suscipit provident ipsam! Blanditiis, quo.</p>
+
+                <div class="contenedorPrincipal__descripcion main">
+                    <img class="contenedorPrincipal__logo" src="img/cerveza-pino-gris.png" alt="imagen corporativa"> 
+                    <article class="contenedorPrincipal_articulos">
+                        <p class="contenedorPrincipal__texto">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero et eligendi totam debitis sunt, ullam quidem temporibus exercitationem! Repellat nam neque iure corporis enim fugiat molestiae illo nesciunt aliquid consequuntur.</p>    
+                        <p class="contenedorPrincipal__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, autem distinctio incidunt quia sunt totam suscipit provident ipsam! Blanditiis, quo.</p>
                     </article>
                 </div>
+
             </section>
+
             <section class="contenedorDestacadas destacada">
-                <div class="caja1">
-                    <h4>Cerveza 1</h4>
-                    <img src="icons/birra5.svg" alt="Cerveza 1">
-                    <p>Breve presentación del primer estilo de cerveza.</p>            
+
+                <div class="contenedorDestacadas__caja caja1">
+                    <h4 class="contenedorDestacadas__titulo">Cerveza 1</h4>
+                    <img class="contenedorDestacadas__imagen" src="icons/birra5.svg" alt="Cerveza 1">
+                    <p class="contenedorDestacadas__texto">Breve presentación del primer estilo de cerveza.</p>            
                 </div>
-                <div class="caja2">
-                    <h4>Cerveza 2</h4>
-                    <img src="icons/birra3.svg" alt="Cerveza 2">
-                    <p>Breve presentación del segundo estilo de cerveza.</p>   
+
+                <div class="contenedorDestacadas__caja caja2">
+                    <h4 class="contenedorDestacadas__titulo">Cerveza 2</h4>
+                    <img class="contenedorDestacadas__imagen" src="icons/birra3.svg" alt="Cerveza 2">
+                    <p class="contenedorDestacadas__texto">Breve presentación del segundo estilo de cerveza.</p>   
                 </div>
-                <div class="caja3">
-                    <h4>Cerveza 3</h4>
-                    <img src="icons/birra7.svg" alt="Cerveza 3">
-                    <p>Breve presentación del tercer estilo de cerveza.</p>
+
+                <div class="contenedorDestacadas__caja caja3">
+                    <h4 class="contenedorDestacadas__titulo">Cerveza 3</h4>
+                    <img class="contenedorDestacadas__imagen" src="icons/birra7.svg" alt="Cerveza 3">
+                    <p class="contenedorDestacadas__texto">Breve presentación del tercer estilo de cerveza.</p>
                 </div>
+
             </section>
+
             <footer class="footer">
+
                 <div>
                     <a href="pages/contacto.html" target="">
                         <h3>Escribinos</h3>
                     </a>
                 </div>
+
                 <div>
                     <a href="https://www.facebook.com/" target="_blank">
                         <img src="icons/facebook.svg" alt="facebook">
@@ -82,8 +109,11 @@
                         <img src="icons/whatsapp.svg" alt="whatsapp">
                     </a>
                 </div>
+
             </footer>
+
         </div>
+
     </body>
 
 </html>

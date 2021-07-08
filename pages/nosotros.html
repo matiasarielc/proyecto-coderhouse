@@ -12,36 +12,54 @@
     </head>
 
     <body>
+
         <div class="contenedor-nosotros">
+
             <header class="header">
+
                 <div>
-                    <a href="../index.html">
-                        <img class="logo" src="../icons/cerveza-pino.png" alt="Logo de la marca">
+                    <a class="header__index" href="../index.html">
+                        <img class="header__logo" src="../icons/cerveza-pino.png" alt="Logo de la marca">
                     </a>
-                </div>       
-                <nav class="menuNavegacion">
+                </div>
+
+                <nav class="navegacion">
                     <ul>
-                        <li>
-                            <a class="iconoMenu" href="../index.html">
-                                <img src="../icons/icono-menu-blanco.png" alt="icono menu">
+                        <li class="navegacion__lista">
+                            <a href="../index.html">
+                                <img class="navegacion__icono" src="../icons/icono-menu-blanco.png" alt="icono menu">
                             </a>
-                            <ul>
-                                <li><a href="../index.html">Inicio</a></li>
-                                <li><a href="productos.html">Productos</a></li>
-                                <li><a href="nosotros.html">Nosotros</a></li>
-                                <li><a href="contacto.html">Contacto</a></li>
-                                <li><a href="galeria.html">Galeria</a></li>
+                            <ul class="navegacion__botones">
+                                <li>
+                                    <a class="navegacion__boton" href="../index.html">Inicio</a>
+                                </li>
+                                <li>
+                                    <a class="navegacion__boton" href="productos.html">Productos</a>
+                                </li>
+                                <li>
+                                    <a class="navegacion__boton" href="nosotros.html">Nosotros</a>
+                                </li>
+                                <li>
+                                    <a class="navegacion__boton" href="contacto.html">Contacto</a>
+                                </li>
+                                <li>
+                                    <a class="navegacion__boton" href="galeria.html">Galeria</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
                 </nav>
+
             </header>
             
             <section class="contenedorNosotros main">
-                <div class="nosotros">
+
+                <div class="cardNosotros cardNosotros--blanco">
+
                     <div>
-                        <video src="../media/pexels-cottonbro-5530285.mp4" controls autoplay></video>
+                        <video class="cardNosotros__video" src="../media/pexels-cottonbro-5530285.mp4" controls autoplay></video>
                     </div>
+
                     <div>
                         <article>
                             <h2>Sobre Nosotros</h2>
@@ -50,30 +68,37 @@
                     </div>
                 </div>
     
-                <div class="elaboracion">
+                <div class="cardNosotros cardNosotros--gris">
+
                     <div>
                         <article>
                             <h2>Proceso de Elaboración</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quasi dolores officiis magnam porro neque quo provident voluptate fuga voluptas quis quia saepe vitae itaque tempore magni totam maiores praesentium doloribus, reprehenderit dolorem illo facilis consequuntur! Delectus ea unde est dicta, provident, assumenda pariatur nihil libero eaque animi in totam.</p>
                         </article>
                     </div>
+
                     <div>
-                        <img src="../img/fabrica-cerveza.jpg" alt="imagen corporativa" class="imagenCorporativa">
+                        <img class="cardNosotros__imagen" src="../img/fabrica-cerveza.jpg" alt="imagen corporativa" >
                     </div>
+
                 </div>
     
-                <div class="ventas">
-                    <div>
+                <div class="cardNosotros cardNosotros--blanco">
+
+                    <div class="cardNosotros__ventas">
                         <h2>Venta envasada</h2>
-                        <img src="../img/botellas.jpg" alt="imagen corporativa" class="imagenCorporativa">
+                        <img class="cardNosotros__imagen" src="../img/botellas.jpg" alt="imagen corporativa" >
                         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, corrupti?</p>
                     </div>
-                    <div>
+
+                    <div class="cardNosotros__ventas">
                         <h2>Venta en barriles</h2>
-                        <img src="../img/barriles-cerveza.jpg" alt="imagen corporativa" class="imagenCorporativa">
+                        <img class="cardNosotros__imagen" src="../img/barriles-cerveza.jpg" alt="imagen corporativa" >
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum, debitis.</p>
                     </div>
+
                 </div>
+
             </section>
         
             <footer class="footer">

@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body{
     background: #093028;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
@@ -13,8 +12,11 @@ body{
     font-family: 'Saira', sans-serif;
 }
 
+p{
+    font-size: 14px;
+}
 
-.contenedor {
+.contenedor{
     width: 100%;
     margin: 0px auto;
     display: grid;
@@ -27,8 +29,7 @@ body{
                         "footer footer footer";
 }
 
-
-.contenedorProductos {
+.contenedorProductos{
     width: 100%;
     margin: 0px auto;
     display: grid;
@@ -42,8 +43,7 @@ body{
                         "footer footer footer";
 }
 
-
-.contenedorContacto {
+.contenedorContacto{
     width: 100%;
     margin: 0px auto;
     display: grid;
@@ -58,8 +58,7 @@ body{
 
 /* ----------   ESTILOS HEADER  ---------- */
 
-
-.header {
+.header{
     grid-area: header;
     background-color: rgb(20,36,39);
     color: rgb(225, 229, 233);
@@ -74,30 +73,25 @@ body{
     border-bottom-right-radius: 10px;
 }
 
-
-.logo{
+.header__logo{
     width: 50px;
     margin: 10px 10px 10px 20px;
 }
 
+.navegacion__icono{
+    width: 20px;
+}
 
-img {
+img{
     width: 50px
 }
 
-
-.menuNavegacion {
+.navegacion{
     font-family: Arial, Helvetica, sans-serif;
     margin: 10px 20px 10px 10px;
 }
 
-
-ul {
-    list-style: none;
-}
-
-
-.menuNavegacion li > a {    
+.navegacion li > a{    
     background-color: rgb(20,36,39);
     color: white;
     text-decoration: none;
@@ -107,34 +101,33 @@ ul {
     text-align: center;
 }
 
-
-.menuNavegacion ul ul a:hover {
+.navegacion__boton:hover{
     background-color: #848C8C;
 }
 
-
-.menuNavegacion li ul {
+.navegacion__botones{
+    list-style: none;
     display: none;
     position: absolute;
 }
 
-
-.menuNavegacion li:hover > ul {
-    display: block;
-    position: absolute;
+.navegacion__lista{
+    list-style-type: none;
 }
 
+.navegacion__lista:hover{
 
-.iconoMenu img {
-    width: 20px;
+    .navegacion__botones{
+        display: block;
+        position: absolute;
+    }
 }
-
 
 
 /* ----------   CONTENEDOR PRINCIPAL  ---------- */
 
 
-.contenedorPrincipal {
+.contenedorPrincipal{
     grid-area: main;
     color: rgb(17, 31, 33);
     display: flex;
@@ -143,8 +136,11 @@ ul {
     justify-content: center;
 }
 
-
-.contenedorDescripcion {
+.contenedorPrincipal__imagen{
+    height: 100%;
+    width: 500px;
+}
+.contenedorPrincipal__descripcion{
     grid-area: main;
     background-color: rgb(225, 229, 233);
     width: 500px;
@@ -153,24 +149,16 @@ ul {
     order: -1;
 }
 
-
-.imagenCanillas {
-    height: 100%;
-    width: 500px;
-}
-
-
-.imagenLogo {
+.contenedorPrincipal__logo{
     width: 100%;
 }
 
-p {
+.contenedorPrincipal__texto{
     font-size: 14px;
     color: #142424;
 }
 
-
-h4 {
+h4{
     color: solid black;
 }
 
@@ -178,7 +166,7 @@ h4 {
 /* ----------   CONTENEDOR DESTACADAS  ---------- */
 
 
-.contenedorDestacadas {
+.contenedorDestacadas{
     grid-area: destacada;
     display: flex;  
     flex-direction: row;
@@ -190,28 +178,7 @@ h4 {
     padding: 30px 50px;
 }
 
-
-.contenedorDestacadas img{
-    width: 60px;
-}
-
-
-.caja1 {
-    grid-area: caja1;
-}
-
-
-.caja2 {
-    grid-area: caja2;
-}
-
-
-.caja3 {
-    grid-area: caja3;
-}
-
-
-.contenedorDestacadas .caja1, .caja2, .caja3 {
+.contenedorDestacadas__caja {
     background-color: rgb(225,229,233);
     color: rgb(17,31,33);
     display: flex;
@@ -225,28 +192,45 @@ h4 {
     border-radius: 10px; 
 }
 
-
-.contenedorDestacadas div:hover {
+.contenedorDestacadas__caja:hover {
     transition: 1s;
     transform: scale(1.2,1.2);
 }
 
-
-.contenedorDestacadas > h4, img, p {
+.contenedorDestacadas__titulo{
     display: inline-block;
     margin: auto;
 }
 
+.contenedorDestacadas__imagen{
+    width: 60px;
+    display: inline-block;
+    margin: auto;
+}
 
-.contenedorDestacadas p{
+.contenedorDestacadas__texto{
     width: 100%;
+    display: inline-block;
+    margin: auto;
+}
+
+.caja1 {
+    grid-area: caja1;
+}
+
+.caja2 {
+    grid-area: caja2;
+}
+
+.caja3 {
+    grid-area: caja3;
 }
 
 
 /* ----------   ESTILOS DE PRODUCTOS  ---------- */
 
 
-.contenedorEstilos {
+.contenedorEstilos{
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(3, 400px);
@@ -254,8 +238,7 @@ h4 {
     justify-content: center;
 }
 
-
-.estilos {
+.estilos{
     background-color: rgb(225,229,233);
     color: rgb(17,31,33);
     display: flex;
@@ -271,20 +254,19 @@ h4 {
         border: solid 1px rgb(17,31,33);
     }
 
-    ul {
+    ul{
         list-style: none;
         color: #F2F1ED;
     }
 
-    li {
+    li{
         display: inline-block;
         background-color: rgb(17,31,33);
         padding: 0px 5px;
     }
 }
 
-
-.estilos:hover {
+.estilos:hover{
     opacity: 100%;
     transition: 1s;
     transform: scale(1.05,1.05);
@@ -295,17 +277,22 @@ h4 {
 /* ----------   ESTILOS DE NOSOTROS   ---------- */
 
 
-.contenedorNosotros {
+.contenedorNosotros{
     margin: 40px;
     padding: 40px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+
+    p{
+        width: 350px;
+        margin: 10px;
+        text-align: justify;
+    }
 }
 
-
-.nosotros, .elaboracion, .ventas {
+.cardNosotros{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -319,42 +306,21 @@ h4 {
     color: rgb(17,31,33);
 }
 
-
-.nosotros:hover {
+.cardNosotros:hover{
     opacity: 100%;
 }
 
-
-.elaboracion:hover {
-    opacity: 100%;
-}
-
-
-.ventas:hover {
-    opacity: 100%;
-}
-
-
-.contenedorNosotros p {
-    width: 350px;
-    margin: 10px;
-    text-align: justify;
-}
-
-
-.nosotros, .ventas {
+.cardNosotros--blanco{
     background-color: white;
     opacity: 85%;
 }
 
-
-.elaboracion {
+.cardNosotros--gris{
     background-color: rgb(225,229,233);
     opacity: 70%;
 }
 
-
-.ventas div {
+.cardNosotros__ventas{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -362,24 +328,20 @@ h4 {
     align-items: center;
 }
 
-
-.imagenCorporativa {
+.cardNosotros__imagen{
     width: 400px;
     border-radius: 10px;
 }
 
-
-.nosotros video {
+.cardNosotros__video{
     width: 400px;
     border-radius: 10px;
 }
-
 
 
 /* ----------   ESTILOS DE CONTACTO   ---------- */
 
-
-.sectionContacto {
+.sectionContacto{
     grid-area: main;
     background-image: url("../img/pinos.jpg");
     background-size: 100%;
@@ -391,8 +353,7 @@ h4 {
     justify-content: center;
 }
 
-
-form {
+form{
     background-color: rgba(225,229,233, 40%);
     width: 400px;
     padding: 20px;
@@ -402,7 +363,7 @@ form {
 /* ----------   ESTILOS DEL FOOTER   ---------- */
 
 
-.footer {
+.footer{
     grid-area: footer;
     background-color: rgb(20,36,39);
     height: 50px;
@@ -415,34 +376,28 @@ form {
     align-content: center;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
+    a{
+        text-decoration: none;
+        color: white;
+    }
+
+    div{
+        margin: 5px;
+        display: flex;
+    }
+
+    img{
+        width: 30px;
+        padding: 0px 3px;
+    }
 }
-
-
-.footer a {
-    text-decoration: none;
-    color: white;
-}
-
-
-.footer div {
-    margin: 5px;
-    display: flex;
-
-}
-
-
-.footer img {
-    width: 30px;
-    padding: 0px 3px;
-}
-
-
 
 
 /* ---------------- MEDIA QUERIES ------------------*/
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 480px){
     .contenedor {
         width: 100%;
         margin: 0px auto;
@@ -458,8 +413,7 @@ form {
                             "footer footer";
     }
 
-
-    .contenedorProductos {
+    .contenedorProductos{
         width: 100%;
         margin: 0px auto;
         display: grid;
@@ -474,8 +428,7 @@ form {
                             "footer footer";
     }
 
-
-    .contenedorEstilos {
+    .contenedorEstilos{
         grid-area: main;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -483,8 +436,7 @@ form {
         justify-content: center;
     }
 
-
-    .contenedorPrincipal {
+    .contenedorPrincipal{
         grid-area: main;
         color: rgb(17, 31, 33);
         display: flex;
@@ -493,12 +445,11 @@ form {
         justify-content: center;
     }
 
-    .imagenCanillas {
+    .contenedorPrincipal__imagen{
         display: none;
     }
     
-
-    .contenedorDestacadas {
+    .contenedorDestacadas{
         grid-area: destacada;
         display: flex;
         flex-direction: row;
@@ -510,16 +461,14 @@ form {
         padding: 30px 50px;
     }
 
-
-    .contenedorEstilos {
+    .contenedorEstilos{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 1fr);
         justify-content: center;
     }
 
-
-    .contenedorNosotros {
+    .contenedorNosotros{
         margin: 40px;
         padding: 40px;
         display: flex;
@@ -528,18 +477,7 @@ form {
         align-content: center;
     }
     
-
-   .ventas img {
-       width: 300px;
-   }
-
-
-   .elaboracion img {
-       width: 300px;
-   }
-    
-
-    .nosotros, .elaboracion, .ventas {
+    .cardNosotros{
         height: 600px;
         align-items: center;
         justify-content: space-around;
@@ -548,11 +486,15 @@ form {
         padding: 10px 30px;
         flex-wrap: wrap;
     }
+
+    .cardNosotros__imagen{
+        width: 300px;
+    }
 }
 
 
-@media screen and (max-width: 768px) {
-    .contenedor {
+@media screen and (max-width: 768px){
+    .contenedor 
         width: 100%;
         margin: 0px auto;
         display: grid;
@@ -565,8 +507,7 @@ form {
                             "footer footer footer";
     }
 
-
-    .contenedorPrincipal {
+    .contenedorPrincipal{
         grid-area: main;
         color: rgb(17, 31, 33);
         display: flex;
@@ -575,8 +516,7 @@ form {
         justify-content: center;
     }
     
-
-    .contenedorDestacadas {
+    .contenedorDestacadas{
         grid-area: destacada;
         display: flex;
         flex-direction: row;
@@ -588,16 +528,14 @@ form {
         padding: 30px 50px;
     }
 
-
-    .contenedorEstilos {
+    .contenedorEstilos{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(9, 1fr);
         justify-content: center;
     }
 
-
-    .contenedorNosotros {
+    .contenedorNosotros{
         margin: 40px;
         padding: 40px;
         display: flex;
@@ -606,18 +544,11 @@ form {
         align-content: center;
     }
     
-
-    .ventas img {
-        width: 300px;
-    }
- 
- 
-    .elaboracion img {
+    .cardNosotros__imagen{
         width: 300px;
     }
 
-    
-    .nosotros, .elaboracion, .ventas {
+    .cardNosotros{
         height: 700px;
         align-items: center;
         justify-content: space-around;
@@ -626,4 +557,4 @@ form {
         padding: 10px 30px;
         flex-wrap: wrap;
     }
-}
+

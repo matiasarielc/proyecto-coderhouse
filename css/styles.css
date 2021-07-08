@@ -13,6 +13,9 @@ body {
   color: #e1e5e9;
   font-family: 'Saira', sans-serif; }
 
+p {
+  font-size: 14px; }
+
 .contenedor {
   width: 100%;
   margin: 0px auto;
@@ -54,21 +57,21 @@ body {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px; }
 
-.logo {
+.header__logo {
   width: 50px;
   margin: 10px 10px 10px 20px; }
+
+.navegacion__icono {
+  width: 20px; }
 
 img {
   width: 50px; }
 
-.menuNavegacion {
+.navegacion {
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px 20px 10px 10px; }
 
-ul {
-  list-style: none; }
-
-.menuNavegacion li > a {
+.navegacion li > a {
   background-color: #142427;
   color: white;
   text-decoration: none;
@@ -77,19 +80,20 @@ ul {
   display: block;
   text-align: center; }
 
-.menuNavegacion ul ul a:hover {
+.navegacion__boton:hover {
   background-color: #848C8C; }
 
-.menuNavegacion li ul {
+.navegacion__botones {
+  list-style: none;
   display: none;
   position: absolute; }
 
-.menuNavegacion li:hover > ul {
+.navegacion__lista {
+  list-style-type: none; }
+
+.navegacion__lista:hover .navegacion__botones {
   display: block;
   position: absolute; }
-
-.iconoMenu img {
-  width: 20px; }
 
 /* ----------   CONTENEDOR PRINCIPAL  ---------- */
 .contenedorPrincipal {
@@ -100,7 +104,11 @@ ul {
   flex-direction: row;
   justify-content: center; }
 
-.contenedorDescripcion {
+.contenedorPrincipal__imagen {
+  height: 100%;
+  width: 500px; }
+
+.contenedorPrincipal__descripcion {
   grid-area: main;
   background-color: #e1e5e9;
   width: 500px;
@@ -108,14 +116,10 @@ ul {
   text-align: justify;
   order: -1; }
 
-.imagenCanillas {
-  height: 100%;
-  width: 500px; }
-
-.imagenLogo {
+.contenedorPrincipal__logo {
   width: 100%; }
 
-p {
+.contenedorPrincipal__texto {
   font-size: 14px;
   color: #142424; }
 
@@ -134,19 +138,7 @@ h4 {
   height: 400px;
   padding: 30px 50px; }
 
-.contenedorDestacadas img {
-  width: 60px; }
-
-.caja1 {
-  grid-area: caja1; }
-
-.caja2 {
-  grid-area: caja2; }
-
-.caja3 {
-  grid-area: caja3; }
-
-.contenedorDestacadas .caja1, .caja2, .caja3 {
+.contenedorDestacadas__caja {
   background-color: #e1e5e9;
   color: #111f21;
   display: flex;
@@ -159,16 +151,32 @@ h4 {
   text-align: center;
   border-radius: 10px; }
 
-.contenedorDestacadas div:hover {
+.contenedorDestacadas__caja:hover {
   transition: 1s;
   transform: scale(1.2, 1.2); }
 
-.contenedorDestacadas > h4, img, p {
+.contenedorDestacadas__titulo {
   display: inline-block;
   margin: auto; }
 
-.contenedorDestacadas p {
-  width: 100%; }
+.contenedorDestacadas__imagen {
+  width: 60px;
+  display: inline-block;
+  margin: auto; }
+
+.contenedorDestacadas__texto {
+  width: 100%;
+  display: inline-block;
+  margin: auto; }
+
+.caja1 {
+  grid-area: caja1; }
+
+.caja2 {
+  grid-area: caja2; }
+
+.caja3 {
+  grid-area: caja3; }
 
 /* ----------   ESTILOS DE PRODUCTOS  ---------- */
 .contenedorEstilos {
@@ -212,8 +220,12 @@ h4 {
   flex-direction: column;
   flex-wrap: wrap;
   align-content: center; }
+  .contenedorNosotros p {
+    width: 350px;
+    margin: 10px;
+    text-align: justify; }
 
-.nosotros, .elaboracion, .ventas {
+.cardNosotros {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -226,40 +238,29 @@ h4 {
   border-radius: 10px;
   color: #111f21; }
 
-.nosotros:hover {
+.cardNosotros:hover {
   opacity: 100%; }
 
-.elaboracion:hover {
-  opacity: 100%; }
-
-.ventas:hover {
-  opacity: 100%; }
-
-.contenedorNosotros p {
-  width: 350px;
-  margin: 10px;
-  text-align: justify; }
-
-.nosotros, .ventas {
+.cardNosotros--blanco {
   background-color: white;
   opacity: 85%; }
 
-.elaboracion {
+.cardNosotros--gris {
   background-color: #e1e5e9;
   opacity: 70%; }
 
-.ventas div {
+.cardNosotros__ventas {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   padding: 20px;
   align-items: center; }
 
-.imagenCorporativa {
+.cardNosotros__imagen {
   width: 400px;
   border-radius: 10px; }
 
-.nosotros video {
+.cardNosotros__video {
   width: 400px;
   border-radius: 10px; }
 
@@ -294,18 +295,15 @@ form {
   align-content: center;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px; }
-
-.footer a {
-  text-decoration: none;
-  color: white; }
-
-.footer div {
-  margin: 5px;
-  display: flex; }
-
-.footer img {
-  width: 30px;
-  padding: 0px 3px; }
+  .footer a {
+    text-decoration: none;
+    color: white; }
+  .footer div {
+    margin: 5px;
+    display: flex; }
+  .footer img {
+    width: 30px;
+    padding: 0px 3px; }
 
 /* ---------------- MEDIA QUERIES ------------------*/
 @media screen and (max-width: 480px) {
@@ -338,7 +336,7 @@ form {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center; }
-  .imagenCanillas {
+  .contenedorPrincipal__imagen {
     display: none; }
   .contenedorDestacadas {
     grid-area: destacada;
@@ -366,14 +364,16 @@ form {
     width: 300px; }
   .elaboracion img {
     width: 300px; }
-  .nosotros, .elaboracion, .ventas {
+  .cardNosotros {
     height: 600px;
     align-items: center;
     justify-content: space-around;
     text-align: center;
     margin: 20px 10px;
     padding: 10px 30px;
-    flex-wrap: wrap; } }
+    flex-wrap: wrap; }
+  .cardNosotros__imagen {
+    width: 300px; } }
 
 @media screen and (max-width: 768px) {
   .contenedor {
