@@ -1,362 +1,84 @@
+@import "colores";
+@import "header";
+@import "productos";
+@import "nosotros";
+@import "main";
+
+@mixin contenedor {
+    width: 100%;
+    margin: 0px auto;
+    display: grid;
+}
+
+
 *{
     margin: 0;
     padding: 0%;
     box-sizing: border-box;
 }
 
+
 body{
-    background: #093028;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: rgb(225, 229, 233);
+    background: $background;
+    color: $colorFuente1;
     font-family: 'Saira', sans-serif;
+
+    p{
+        font-size: 14px;
+    }
 }
 
-p{
-    font-size: 14px;
-}
 
 .contenedor{
-    width: 100%;
-    margin: 0px auto;
-    display: grid;
+    @include contenedor;
     grid-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas:"header header header"
-                        "main main main"
-                        "destacada destacada destacada"
-                        "footer footer footer";
+    grid-template-areas:"hd hd hd hd hd hd hd hd hd hd hd hd"
+                        "mn mn mn mn mn mn mn mn mn mn mn mn"
+                        "ds ds ds ds ds ds ds ds ds ds ds ds"
+                        "ft ft ft ft ft ft ft ft ft ft ft ft";
 }
 
 .contenedorProductos{
-    width: 100%;
-    margin: 0px auto;
-    display: grid;
+    @include contenedor;
     grid-gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(5, auto);
-    grid-template-areas:"header header header"
-                        "main main main"
-                        "main main main"
-                        "main main main"
-                        "footer footer footer";
+    grid-template-areas:"hd hd hd"
+                        "mn mn mn"
+                        "mn mn mn"
+                        "mn mn mn"
+                        "ft ft ft";
 }
 
 .contenedorContacto{
-    width: 100%;
-    margin: 0px auto;
-    display: grid;
+    @include contenedor;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, auto);
-    grid-template-areas:"header header header"
-                        "main main main"
-                        "footer footer footer";
-}
-
-
-
-/* ----------   ESTILOS HEADER  ---------- */
-
-.header{
-    grid-area: header;
-    background-color: rgb(20,36,39);
-    color: rgb(225, 229, 233);
-    height: 80px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.header__logo{
-    width: 50px;
-    margin: 10px 10px 10px 20px;
-}
-
-.navegacion__icono{
-    width: 20px;
-}
-
-img{
-    width: 50px
-}
-
-.navegacion{
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 10px 20px 10px 10px;
-}
-
-.navegacion li > a{    
-    background-color: rgb(20,36,39);
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    width: 120px;
-    display: block;
-    text-align: center;
-}
-
-.navegacion__boton:hover{
-    background-color: #848C8C;
-}
-
-.navegacion__botones{
-    list-style: none;
-    display: none;
-    position: absolute;
-}
-
-.navegacion__lista{
-    list-style-type: none;
-}
-
-.navegacion__lista:hover{
-
-    .navegacion__botones{
-        display: block;
-        position: absolute;
-    }
-}
-
-
-/* ----------   CONTENEDOR PRINCIPAL  ---------- */
-
-
-.contenedorPrincipal{
-    grid-area: main;
-    color: rgb(17, 31, 33);
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.contenedorPrincipal__imagen{
-    height: 100%;
-    width: 500px;
-}
-.contenedorPrincipal__descripcion{
-    grid-area: main;
-    background-color: rgb(225, 229, 233);
-    width: 500px;
-    padding: 40px;
-    text-align: justify;
-    order: -1;
-}
-
-.contenedorPrincipal__logo{
-    width: 100%;
-}
-
-.contenedorPrincipal__texto{
-    font-size: 14px;
-    color: #142424;
-}
-
-h4{
-    color: solid black;
-}
-
-
-/* ----------   CONTENEDOR DESTACADAS  ---------- */
-
-
-.contenedorDestacadas{
-    grid-area: destacada;
-    display: flex;  
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
-    height: 400px;
-    padding: 30px 50px;
-}
-
-.contenedorDestacadas__caja {
-    background-color: rgb(225,229,233);
-    color: rgb(17,31,33);
-    display: flex;
-    flex-direction: column;
-    width: 200px;
-    height: 200px;
-    margin: 20px;
-    padding: 10px;
-    letter-spacing: 1px;
-    text-align: center;
-    border-radius: 10px; 
-}
-
-.contenedorDestacadas__caja:hover {
-    transition: 1s;
-    transform: scale(1.2,1.2);
-}
-
-.contenedorDestacadas__titulo{
-    display: inline-block;
-    margin: auto;
-}
-
-.contenedorDestacadas__imagen{
-    width: 60px;
-    display: inline-block;
-    margin: auto;
-}
-
-.contenedorDestacadas__texto{
-    width: 100%;
-    display: inline-block;
-    margin: auto;
-}
-
-.caja1 {
-    grid-area: caja1;
-}
-
-.caja2 {
-    grid-area: caja2;
-}
-
-.caja3 {
-    grid-area: caja3;
-}
-
-
-/* ----------   ESTILOS DE PRODUCTOS  ---------- */
-
-
-.contenedorEstilos{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(3, 400px);
-    grid-template-rows: repeat(3, 1fr);
-    justify-content: center;
-}
-
-.estilos{
-    background-color: rgb(225,229,233);
-    color: rgb(17,31,33);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: 10px;
-    padding: 10px;
-    text-align: justify;
-    opacity: 80%;
-    border-radius: 10px;
-
-    hr{
-        border: solid 1px rgb(17,31,33);
-    }
-
-    ul{
-        list-style: none;
-        color: #F2F1ED;
-    }
-
-    li{
-        display: inline-block;
-        background-color: rgb(17,31,33);
-        padding: 0px 5px;
-    }
-}
-
-.estilos:hover{
-    opacity: 100%;
-    transition: 1s;
-    transform: scale(1.05,1.05);
-}
-
-
-
-/* ----------   ESTILOS DE NOSOTROS   ---------- */
-
-
-.contenedorNosotros{
-    margin: 40px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-
-    p{
-        width: 350px;
-        margin: 10px;
-        text-align: justify;
-    }
-}
-
-.cardNosotros{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    height: 400px;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    margin: 20px 10px;
-    padding: 10px 30px;
-    border-radius: 10px;
-    color: rgb(17,31,33);
-}
-
-.cardNosotros:hover{
-    opacity: 100%;
-}
-
-.cardNosotros--blanco{
-    background-color: white;
-    opacity: 85%;
-}
-
-.cardNosotros--gris{
-    background-color: rgb(225,229,233);
-    opacity: 70%;
-}
-
-.cardNosotros__ventas{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: 20px;
-    align-items: center;
-}
-
-.cardNosotros__imagen{
-    width: 400px;
-    border-radius: 10px;
-}
-
-.cardNosotros__video{
-    width: 400px;
-    border-radius: 10px;
+    grid-template-areas:"hd hd hd"
+                        "mn mn mn"
+                        "ft ft ft";
 }
 
 
 /* ----------   ESTILOS DE CONTACTO   ---------- */
 
 .sectionContacto{
-    grid-area: main;
+    grid-area: mn;
     background-image: url("../img/pinos.jpg");
     background-size: 100%;
     width: 100%;
-    background-color: rgba(225,229,233, 40%);
-    color: rgb(17, 31, 33);
+    color: $colorFuente2;
     text-align: center;
     display: flex;
     justify-content: center;
-}
 
-form{
-    background-color: rgba(225,229,233, 40%);
-    width: 400px;
-    padding: 20px;
+    .formulario{
+        background-color: rgba(225,229,233,40%);
+        width: 400px;
+        padding: 20px;
+    }
 }
 
 
@@ -364,8 +86,8 @@ form{
 
 
 .footer{
-    grid-area: footer;
-    background-color: rgb(20,36,39);
+    grid-area: ft;
+    background-color: $colorPrincipal;
     height: 50px;
     width: 100%;
     display: flex;
@@ -394,42 +116,40 @@ form{
 }
 
 
-/* ---------------- MEDIA QUERIES ------------------*/
+/* ------------------ MEDIA QUERIES -----------------*/
+
+/* --------------------- Mobile ---------------------*/
 
 
 @media screen and (max-width: 480px){
-    .contenedor {
-        width: 100%;
-        margin: 0px auto;
-        display: grid;
+    .contenedor{
+        @include contenedor;
         grid-gap: 10px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, auto);
-        grid-template-areas:"header header"
-                            "main main"
-                            "destacada destacada"
-                            "destacada destacada"
-                            "destacada destacada"
-                            "footer footer";
+        grid-template-areas:"hd hd"
+                            "mn mn"
+                            "ds ds"
+                            "ds ds"
+                            "ds ds"
+                            "ft ft";
     }
 
     .contenedorProductos{
-        width: 100%;
-        margin: 0px auto;
-        display: grid;
+        @include contenedor;
         grid-gap: 10px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(9, auto);
-        grid-template-areas:"header header"
-                            "main main"
-                            "destacada destacada"
-                            "destacada destacada"
-                            "destacada destacada"
-                            "footer footer";
+        grid-template-areas:"hd hd"
+                            "mn mn"
+                            "ds ds"
+                            "ds ds"
+                            "ds ds"
+                            "ft ft";
     }
 
     .contenedorEstilos{
-        grid-area: main;
+        grid-area: mn;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(9, 1fr);
@@ -437,20 +157,20 @@ form{
     }
 
     .contenedorPrincipal{
-        grid-area: main;
-        color: rgb(17, 31, 33);
+        grid-area: mn;
+        color: $colorFuente2;
         display: flex;
-        flex-wrap: wrap;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
-    }
 
-    .contenedorPrincipal__imagen{
-        display: none;
+        .contenedorPrincipal__imagen{
+            display: none;
+        }
     }
     
     .contenedorDestacadas{
-        grid-area: destacada;
+        grid-area: ds;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -461,13 +181,6 @@ form{
         padding: 30px 50px;
     }
 
-    .contenedorEstilos{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(9, 1fr);
-        justify-content: center;
-    }
-
     .contenedorNosotros{
         margin: 40px;
         padding: 40px;
@@ -475,40 +188,42 @@ form{
         flex-direction: column;
         flex-wrap: wrap;
         align-content: center;
-    }
-    
-    .cardNosotros{
-        height: 600px;
-        align-items: center;
-        justify-content: space-around;
-        text-align: center;
-        margin: 20px 10px;
-        padding: 10px 30px;
-        flex-wrap: wrap;
-    }
 
-    .cardNosotros__imagen{
-        width: 300px;
+        .cardNosotros{
+            height: 600px;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            margin: 20px 10px;
+            padding: 10px 30px;
+            flex-wrap: wrap;
+
+            .cardNosotros__imagen{
+                width: 300px;
+            }
+        }
     }
 }
 
 
+/* --------------------- Tablet ---------------------*/
+
+
 @media screen and (max-width: 768px){
-    .contenedor 
-        width: 100%;
-        margin: 0px auto;
-        display: grid;
+    .contenedor{ 
+        @include contenedor;
         grid-gap: 10px;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, auto);
-        grid-template-areas:"header header header"
-                            "main main main"
-                            "destacada destacada destacada"
-                            "footer footer footer";
-    }
+        grid-template-areas:"hd hd hd"
+                            "mn mn mn"
+                            "ds ds ds"
+                            "ft ft ft";
+    }                    
+    
 
     .contenedorPrincipal{
-        grid-area: main;
+        grid-area: mn;
         color: rgb(17, 31, 33);
         display: flex;
         flex-wrap: wrap;
@@ -517,7 +232,7 @@ form{
     }
     
     .contenedorDestacadas{
-        grid-area: destacada;
+        grid-area: ds;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -557,4 +272,4 @@ form{
         padding: 10px 30px;
         flex-wrap: wrap;
     }
-
+}    

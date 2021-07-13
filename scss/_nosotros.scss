@@ -1,0 +1,66 @@
+@import "colores";
+
+@mixin column-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+@mixin media {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.contenedorNosotros{
+    @include column-wrap;
+    margin: 40px;
+    padding: 40px;
+    align-content: center;
+}
+
+.contenedorNosotros__parrafo{
+    width: 350px;
+    margin: 10px;
+    text-align: justify;
+}
+
+.cardNosotros{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 400px;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    margin: 20px 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    color: $colorFuente2;
+
+    &:hover{
+        opacity: 100%;}
+}
+
+.cardNosotros--blanco{
+    background-color: $colorCaja2;
+    opacity: 85%;
+}
+
+.cardNosotros--gris{
+    background-color: $colorCaja1;
+    opacity: 70%;
+}
+
+.cardNosotros__ventas{
+    @include column-wrap;
+    padding: 20px;
+    align-items: center;
+}
+
+.cardNosotros__imagen{
+    @include media;
+}
+
+.cardNosotros__video{
+    @include media;
+}

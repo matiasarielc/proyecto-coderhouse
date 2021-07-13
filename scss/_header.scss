@@ -1,0 +1,59 @@
+@import "colores";
+
+.header{
+    grid-area: hd;
+    background-color: $colorPrincipal;
+    color: $colorFuente1;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    .header__logo{
+        width: 50px;
+        margin: 10px 10px 10px 20px;
+    }
+}
+
+.navegacion{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 20px 10px 10px;
+
+    .navegacion__icono{
+        width: 20px;
+    }
+
+    .navegacion__lista{
+        list-style-type: none;
+        &:hover{
+            .navegacion__botones{
+                display: block;
+                position: absolute;
+            }
+        }
+    }
+
+    li > a{    
+        background-color: $colorPrincipal;
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        width: 120px;
+        display: block;
+        text-align: center;
+    }
+
+    .navegacion__botones{
+        list-style: none;
+        display: none;
+        position: absolute;
+        &:hover{
+            background-color: #848C8C;
+        }
+    }
+}
