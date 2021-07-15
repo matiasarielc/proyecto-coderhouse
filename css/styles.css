@@ -1,6 +1,9 @@
 /* fallback for old browsers */
 /* Chrome 10-25, Safari 5.1-6 */
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+/* fallback for old browsers */
+/* Chrome 10-25, Safari 5.1-6 */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 .header {
   grid-area: hd;
   background-color: #142427;
@@ -14,45 +17,38 @@
   justify-content: space-between;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px; }
-
-.header__logo {
-  width: 50px;
-  margin: 10px 10px 10px 20px; }
-
-.navegacion__icono {
-  width: 20px; }
-
-img {
-  width: 50px; }
+  .header .header__logo {
+    width: 50px;
+    margin: 10px 10px 10px 20px; }
 
 .navegacion {
   font-family: Arial, Helvetica, sans-serif;
   margin: 10px 20px 10px 10px; }
+  .navegacion .navegacion__icono {
+    width: 20px; }
+  .navegacion .navegacion__lista {
+    list-style-type: none; }
+    .navegacion .navegacion__lista:hover .navegacion__botones {
+      display: block;
+      position: absolute; }
+  .navegacion li > a {
+    background-color: #142427;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    width: 120px;
+    display: block;
+    text-align: center; }
+  .navegacion .navegacion__botones {
+    list-style: none;
+    display: none;
+    position: absolute; }
+    .navegacion .navegacion__botones:hover {
+      background-color: #848C8C; }
 
-.navegacion li > a {
-  background-color: #142427;
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  width: 120px;
-  display: block;
-  text-align: center; }
-
-.navegacion__boton:hover {
-  background-color: #848C8C; }
-
-.navegacion__botones {
-  list-style: none;
-  display: none;
-  position: absolute; }
-
-.navegacion__lista {
-  list-style-type: none; }
-
-.navegacion__lista:hover .navegacion__botones {
-  display: block;
-  position: absolute; }
-
+/* fallback for old browsers */
+/* Chrome 10-25, Safari 5.1-6 */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 .contenedorEstilos {
   grid-area: mn;
   display: grid;
@@ -71,32 +67,35 @@ img {
   text-align: justify;
   opacity: 80%;
   border-radius: 10px; }
+  .estilos:hover {
+    opacity: 100%;
+    transition: 1s;
+    transform: scale(1.05, 1.05); }
   .estilos hr {
     border: solid 1px #111f21; }
   .estilos ul {
     list-style: none;
     color: #F2F1ED; }
-  .estilos li {
-    display: inline-block;
-    background-color: #111f21;
-    padding: 0px 5px; }
+    .estilos ul li {
+      display: inline-block;
+      background-color: #111f21;
+      padding: 0px 5px; }
 
-.estilos:hover {
-  opacity: 100%;
-  transition: 1s;
-  transform: scale(1.05, 1.05); }
-
+/* fallback for old browsers */
+/* Chrome 10-25, Safari 5.1-6 */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 .contenedorNosotros {
-  margin: 40px;
-  padding: 40px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  margin: 40px;
+  padding: 40px;
   align-content: center; }
-  .contenedorNosotros p {
-    width: 350px;
-    margin: 10px;
-    text-align: justify; }
+
+.contenedorNosotros__parrafo {
+  width: 350px;
+  margin: 10px;
+  text-align: justify; }
 
 .cardNosotros {
   display: flex;
@@ -110,12 +109,11 @@ img {
   padding: 10px 30px;
   border-radius: 10px;
   color: #111f21; }
-
-.cardNosotros:hover {
-  opacity: 100%; }
+  .cardNosotros:hover {
+    opacity: 100%; }
 
 .cardNosotros--blanco {
-  background-color: white;
+  background-color: #ffffff;
   opacity: 85%; }
 
 .cardNosotros--gris {
@@ -137,6 +135,9 @@ img {
   width: 400px;
   border-radius: 10px; }
 
+/* fallback for old browsers */
+/* Chrome 10-25, Safari 5.1-6 */
+/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 /* ----------   CONTENEDOR PRINCIPAL  ---------- */
 .contenedorPrincipal {
   grid-area: mn;
@@ -192,10 +193,9 @@ h4 {
   letter-spacing: 1px;
   text-align: center;
   border-radius: 10px; }
-
-.contenedorDestacadas__caja:hover {
-  transition: 1s;
-  transform: scale(1.2, 1.2); }
+  .contenedorDestacadas__caja:hover {
+    transition: 1s;
+    transform: scale(1.2, 1.2); }
 
 .contenedorDestacadas__titulo {
   display: inline-block;
@@ -229,9 +229,8 @@ body {
   background: linear-gradient(to right, #237A57, #093028);
   color: #e1e5e9;
   font-family: 'Saira', sans-serif; }
-
-p {
-  font-size: 14px; }
+  body p {
+    font-size: 14px; }
 
 .contenedor {
   width: 100%;
@@ -265,16 +264,14 @@ p {
   background-image: url("../img/pinos.jpg");
   background-size: 100%;
   width: 100%;
-  background-color: #e1e5e9;
   color: #111f21;
   text-align: center;
   display: flex;
   justify-content: center; }
-
-form {
-  background-color: #e1e5e9;
-  width: 400px;
-  padding: 20px; }
+  .sectionContacto .formulario {
+    background-color: #e1e5e9;
+    width: 400px;
+    padding: 20px; }
 
 /* ----------   ESTILOS DEL FOOTER   ---------- */
 .footer {
@@ -329,11 +326,11 @@ form {
     grid-area: mn;
     color: #111f21;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center; }
-  .contenedorPrincipal__imagen {
-    display: none; }
+    .contenedorPrincipal .contenedorPrincipal__imagen {
+      display: none; }
   .contenedorDestacadas {
     grid-area: ds;
     display: flex;
@@ -344,11 +341,6 @@ form {
     align-content: center;
     height: 700px;
     padding: 30px 50px; }
-  .contenedorEstilos {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, 1fr);
-    justify-content: center; }
   .contenedorNosotros {
     margin: 40px;
     padding: 40px;
@@ -356,16 +348,16 @@ form {
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center; }
-  .cardNosotros {
-    height: 600px;
-    align-items: center;
-    justify-content: space-around;
-    text-align: center;
-    margin: 20px 10px;
-    padding: 10px 30px;
-    flex-wrap: wrap; }
-  .cardNosotros__imagen {
-    width: 300px; } }
+    .contenedorNosotros .cardNosotros {
+      height: 600px;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+      margin: 20px 10px;
+      padding: 10px 30px;
+      flex-wrap: wrap; }
+      .contenedorNosotros .cardNosotros .cardNosotros__imagen {
+        width: 300px; } }
 
 /* --------------------- Tablet ---------------------*/
 @media screen and (max-width: 768px) {
