@@ -6,7 +6,7 @@
 /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 .header {
   grid-area: hd;
-  background-color: #0F044C;
+  background-color: #142427;
   color: #e1e5e9;
   height: 80px;
   width: 100%;
@@ -32,7 +32,7 @@
       display: block;
       position: absolute; }
   .navegacion li > a {
-    background-color: #0F044C;
+    background-color: #142427;
     color: white;
     text-decoration: none;
     padding: 10px 15px;
@@ -226,7 +226,7 @@ h4 {
   box-sizing: border-box; }
 
 body {
-  background: #141E61;
+  background: linear-gradient(to right, #237A57, #093028);
   color: #e1e5e9;
   font-family: 'Saira', sans-serif; }
   body p {
@@ -276,7 +276,7 @@ body {
 /* ----------   ESTILOS DEL FOOTER   ---------- */
 .footer {
   grid-area: ft;
-  background-color: #0F044C;
+  background-color: #142427;
   height: 50px;
   width: 100%;
   display: flex;
