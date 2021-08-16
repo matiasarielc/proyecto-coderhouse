@@ -34,11 +34,15 @@
             .navegacion__botones{
                 display: block;
                 position: absolute;
+                .navegacion__boton {
+                    background-color: #848C8C;
+                }
             }
         }
     }
+    
 
-    li > a{    
+    .navegacion__boton{    
         background-color: $colorPrincipal;
         color: white;
         text-decoration: none;
@@ -52,8 +56,6 @@
         list-style: none;
         display: none;
         position: absolute;
-        &:hover{
-            background-color: #848C8C;
         }
     }
 }
